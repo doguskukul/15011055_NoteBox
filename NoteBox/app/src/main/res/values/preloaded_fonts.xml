@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/arvo_italic</item>
+        <item>@font/belleza</item>
+        <item>@font/cairo</item>
+        <item>@font/carme</item>
+        <item>@font/coda</item>
+        <item>@font/khand_light</item>
+    </array>
+</resources>

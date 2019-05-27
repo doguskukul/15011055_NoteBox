@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityAddNote">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/event_note"
+        app:title="@string/NoteBox" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+        <EditText
+            android:id="@+id/editTextBaslik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:ems="10"
+            android:hint="@string/baslik"
+            android:inputType="textPersonName"
+            android:textColorHighlight="@color/colorAccent" />
+
+        <EditText
+            android:id="@+id/editTextAciklama"
+            android:layout_width="match_parent"
+            android:layout_height="242dp"
+            android:layout_margin="3dp"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="@string/aciklama"
+            android:inputType="textMultiLine"
+            android:textColorHighlight="@color/colorAccent" />
+
+        <Switch
+            android:id="@+id/switchOnceliklimi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="Öncelikli mi?     "
+            android:textColor="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="3dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Metin Rengi     " />
+
+            <CheckBox
+                android:id="@+id/checkBoxMavi"
+                style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:buttonTint="@color/mavi"
+                android:paddingRight="3dp"
+                android:textColorHighlight="@color/mavi"
+                android:textColorLink="@color/mavi"
+                android:textCursorDrawable="@color/mavi"
+                tools:text="Mavi" />
+
+            <CheckBox
+                android:id="@+id/checkBoxKirmizi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:buttonTint="@color/kirmizi"
+                android:paddingRight="3dp"
+                android:textColorLink="@color/kirmizi"
+                android:textCursorDrawable="@color/kirmizi"
+                tools:text="Kırmızı" />
+
+            <CheckBox
+                android:id="@+id/checkBoxYesil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:buttonTint="@color/yesil"
+                android:paddingRight="3dp"
+                android:textColorLink="@color/yesil"
+                android:textCursorDrawable="@color/yesil"
+                tools:text="Yeşil" />
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewDateOlusturulma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="1dp"
+                android:text="@string/tarih"
+                app:layout_constraintStart_toEndOf="@+id/textViewOlusturulma"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewDateGuncellenme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="1dp"
+                android:text="@string/tarih"
+                app:layout_constraintStart_toEndOf="@+id/textViewGuncellenme"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDateOlusturulma" />
+
+            <TextView
+                android:id="@+id/textViewOlusturulma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="1dp"
+                android:text="Oluşturuldu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewGuncellenme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="1dp"
+                android:text="Güncellendi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewOlusturulma" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editSaat"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="2dp"
+                android:hint="saat"
+                android:inputType="textPersonName"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/editTekrar"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/editDakika"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="2dp"
+                android:hint="dk"
+                android:inputType="textPersonName"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/editSaat"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/editTekrar"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="2dp"
+                android:hint="tekrar(dk)"
+                android:inputType="textPersonName"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/buttonHatirlatma"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="6dp"
+                android:text="Hatırlatma Ekle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonHatirlatma"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/add_alarm"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/buttonAccept"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/check_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonDosyaEkle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/attachment"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonDosyaAc"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/file"
+                app:layout_constraintStart_toEndOf="@+id/textViewDosyaYolu"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewDosyaYolu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Dosya Yolu"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Dosya Ekle"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintStart_toEndOf="@+id/buttonDosyaEkle"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

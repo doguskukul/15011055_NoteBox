@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NoteBox</string>
+    <string name="baslik">Başlık</string>
+    <string name="aciklama">Açıklama</string>
+    <string name="tarih">Tarih</string>
+    <string name="NoteBox">NoteBox</string>
+</resources>
